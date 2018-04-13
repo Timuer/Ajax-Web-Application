@@ -1,11 +1,12 @@
 # coding: utf-8
 import _thread
 import socket
-from utils import log
 from objects import Request
-from routes import routes_dict
-from routes import error
-from todo_routes import todo_routes_dict
+from routes.routes import error
+from routes.routes import routes_dict
+from routes.todo_routes import todo_routes_dict
+from routes.weibo_routes import weibo_routes_dict
+from utils import log
 
 
 def parsed_request(request_data):
@@ -67,6 +68,7 @@ def update_dispatches():
 routes_list = [
 	routes_dict,
 	todo_routes_dict,
+	weibo_routes_dict,
 ]
 
 
@@ -80,7 +82,7 @@ def process_request(connection):
 	connection.close()
 
 
-def start_server(host="", port=8000):
+def start_server(host="", port=80):
 	with socket.socket() as s:
 		s.bind((host, port))
 		while True:

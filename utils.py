@@ -2,6 +2,14 @@ import random
 import time
 import hashlib
 from objects import Response
+from jinja2 import Environment, FileSystemLoader
+import os.path
+
+
+
+path = "{}/templates/".format(os.path.dirname(__file__))
+loader = FileSystemLoader(path)
+env = Environment(loader=loader)
 
 
 def get_local_time():

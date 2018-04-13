@@ -2,6 +2,11 @@ var e = function(sel) {
 	return document.querySelector(sel)
 }
 
+var getTimeStamp = function(timeMillis) {
+	var d = new Date(timeMillis)
+	return d.toLocaleString()
+}
+
 var ajax = function(method, path, data, callback) {
 	r = new XMLHttpRequest()
 	r.open(method, path, true)

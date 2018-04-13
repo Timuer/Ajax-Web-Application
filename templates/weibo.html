@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Weibo</h1>
+		<div>
+			标题：<input type="text" id="add-title"><br/>
+			正文：<textarea cols="50" rows="10" id="add-article"></textarea><br/>
+			<button class="add-btn">新建Weibo</button>
+		</div>
+		<div>
+			<ul class="weibo-list">
+				<!-- <li class="weibo-pane" id="weibo-${id}" data-id="${id}">
+					<h3 class="weibo-title">${title}</h3>
+					<p class="weibo-article">${article}</p>
+					<div class="weibo-info">
+						<span>赞同: ${votes}</span>
+						<span>创建时间: ${ct}</span>
+						<span>更新时间: ${ut}</span><br/>
+						<button class="edit-btn">编辑</button>
+						<button class="del-btn">删除</button>
+					</div>
+					<div class="update-pane" data-id="${id}">
+						标题：<input type="text" class="update-title"><br/>
+						正文：<textarea cols="50" rows="10" class="update-article"></textarea><br/>
+						<button class="update-btn">更新</button>
+					</div>
+				</li> -->
+			</ul>
+		</div>
+		<script src="/static?file=utils.js"></script>
+		<script src="/static?file=apis.js"></script>
+		<script src="/static?file=weibo.js"></script>
+	</body>
+</html>

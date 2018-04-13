@@ -1,11 +1,5 @@
 from objects import Response
-from jinja2 import Environment, FileSystemLoader
-import os.path
-
-
-path = "{}/templates/".format(os.path.dirname(__file__))
-loader = FileSystemLoader(path)
-env = Environment(loader=loader)
+from utils import env
 
 
 def redirect(url):
